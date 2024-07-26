@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+  <title>Carregar Video </title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Escolha o video</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+      <input type="file" name="file">
+      <input type="submit" value="Upload">
+    </form>
+  </div>
+</body>
+</html>
