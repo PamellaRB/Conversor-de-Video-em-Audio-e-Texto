@@ -1,8 +1,7 @@
 """Este script cria um aplicativo web Flask que permite ao usuário fazer upload de um vídeo MP4,
 extrair o áudio, transcrever o áudio e baixar o áudio e a transcrição resultante."""
 
-"""Antes da execução do programa, realizar a instação pip install Flask moviepy 
-SpeechRecognition pydub werkzeug"""
+"""Antes da execução do programa, realizar a instação pip install Flask moviepy SpeechRecognition pydub werkzeug"""
 
 
 import os
