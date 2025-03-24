@@ -14,7 +14,7 @@ redirecionamentos, URLs, envio de arquivos e renderização de templates"""
 from werkzeug.utils import secure_filename
 """Importa a função secure_filename da biblioteca Werkzeug, que é usada para garantir que o nome do arquivo 
 enviado seja seguro e válido."""
-import moviepy.editor as mp
+import moviepy as mp
 """Importa a biblioteca MoviePy e a renomeia como MP. Esta biblioteca é usada para manipulação de vídeo."""
 import speech_recognition as sr
 """Importa a biblioteca SpeechRecognition, que é usada para reconhecimento de fala."""
