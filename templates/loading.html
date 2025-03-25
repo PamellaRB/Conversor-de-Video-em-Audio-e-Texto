@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processando...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #9e34db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+        function checkProcessingStatus() {
+            fetch('/check_status')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.processing_complete) {
+                        window.location.href = '/download'; // Redireciona quando terminar
+                    } else {
+                        setTimeout(checkProcessingStatus, 3000); // Checa de novo em 2s
+                    }
+                });
+        }
+
+        window.onload = checkProcessingStatus; // Inicia a verificação quando a página carregar
+    </script>
+</head>
+<body>
+    <h1>Processando seu vídeo...</h1>
+    <div class="loader"></div>
+    <p>Aguarde alguns instantes.</p>
+</body>
+</html>
+
+

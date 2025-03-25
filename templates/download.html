@@ -1,14 +1,17 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <title>Download</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
   <div class="container">
-    <h1>Download de Arquivos</h1>
-    <p><a href="{{ url_for('output_file', filename=audio_file) }}">Download do Áudio Extraído</a></p>
-    <p><a href="{{ url_for('output_file', filename=transcription_file) }}">Download da Transcrição</a></p>
-  </div>
+      <h1>Download dos Arquivos</h1>
+        <p>Seu vídeo foi processado com sucesso! Baixe os arquivos abaixo:</p>
+          <a href="{{ url_for('output_file', filename=audio_file) }}" download><button> Baixar Áudio </button></a><br>
+          <a href="{{ url_for('output_file', filename=transcription_file) }}" download><button> Baixar Texto </button></a>
+    </div>
 </body>
 </html>
