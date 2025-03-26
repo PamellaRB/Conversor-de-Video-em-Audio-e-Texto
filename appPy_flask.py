@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, url_for, send_from_directory, render_template, session, jsonify
+from flask import Flask, request, redirect, url_for, send_from_directory, render_template, jsonify
 # Importa as bibliotecas necessárias do Flask para criar o servidor e manipular requisições.
 
 import os
